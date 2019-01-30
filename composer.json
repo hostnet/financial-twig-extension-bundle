@@ -5,6 +5,7 @@
     "license":     "MIT",
     "require": {
         "php":                      "^7.1",
+        "ronanguilloux/isocodes":   "^2.1",
         "symfony/framework-bundle": "^3.3|^4.0"
     },
     "require-dev": {

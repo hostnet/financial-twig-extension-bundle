@@ -5,6 +5,8 @@
 declare(strict_types=1);
 namespace Hostnet\Bundle\FinancialTwigExtensionBundle\Twig;
 
+use IsoCodes\Iban;
+
 class FormatIbanExtension extends \Twig_Extension
 {
     /**
@@ -19,6 +21,8 @@ class FormatIbanExtension extends \Twig_Extension
 
     public function formatIban(string $iban): string
     {
-        return implode(' ', str_split(preg_replace('/\s+/', '', $iban), 4));
+        $raw_iban = preg_replace('/\s+/', '', $iban);
+
+        return Iban::validate($raw_iban) ? implode(' ', str_split($raw_iban, 4)) : $iban;
     }
 }

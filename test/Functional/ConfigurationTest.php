@@ -15,19 +15,26 @@ class ConfigurationTest extends KernelTestCase
         static::bootKernel();
     }
 
-    public function testFormatIban()
+    /**
+     * @dataProvider formatIbanProvider
+     */
+    public function testFormatIban(string $unformatted_iban, string $expected)
     {
         $container = static::$kernel->getContainer();
         $twig      = $container->get('twig');
 
         self::assertSame(
-            'NL85 INGB 0008 5231 41',
-            $twig->render('/ibantest.html.twig', ['iban' => 'NL85INGB0008523141'])
+            $expected,
+            $twig->render('/ibantest.html.twig', ['iban' => $unformatted_iban])
         );
+    }
 
-        self::assertSame(
-            'NL85 INGB 0008 5231 41',
-            $twig->render('/ibantest.html.twig', ['iban' => 'NL8 5I NGB00 085 2314 1'])
-        );
+    public function formatIbanProvider(): array
+    {
+        return [
+            ['NL85INGB0008523141'     , 'NL85 INGB 0008 5231 41'],
+            ['NL8 5I NGB00 085 2314 1', 'NL85 INGB 0008 5231 41'],
+            ['No IBAN'                , 'No IBAN'],
+        ];
     }
 }
