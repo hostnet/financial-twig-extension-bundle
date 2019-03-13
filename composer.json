@@ -13,10 +13,10 @@
         "phpunit/phpunit":     "^6.3",
         "symfony/twig-bundle": "^3.3|^4.0",
         "symfony/yaml":        "^3.3|^4.0",
-        "twig/twig":           "^1.26|^2.0"
+        "twig/twig":           "^1.38.2|^2.7.2"
     },
     "conflict": {
-        "twig/twig": "<1.26"
+        "twig/twig": "<1.38"
     },
     "autoload": {
         "psr-4": {
