@@ -6,8 +6,10 @@ declare(strict_types=1);
 namespace Hostnet\Bundle\FinancialTwigExtensionBundle\Twig;
 
 use IsoCodes\Iban;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
-class FormatIbanExtension extends \Twig_Extension
+class FormatIbanExtension extends AbstractExtension
 {
     /**
      * {@inheritdoc}
@@ -15,7 +17,7 @@ class FormatIbanExtension extends \Twig_Extension
     public function getFilters()
     {
         return [
-            new \Twig_SimpleFilter('formatIban', [$this, 'formatIban'])
+            new TwigFilter('formatIban', [$this, 'formatIban'])
         ];
     }
 
