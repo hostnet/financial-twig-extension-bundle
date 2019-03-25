@@ -6,6 +6,7 @@ declare(strict_types=1);
 namespace Hostnet\Bundle\FinancialTwigExtensionBundle\Twig;
 
 use PHPUnit\Framework\TestCase;
+use Twig\TwigFilter;
 
 /**
  * @covers \Hostnet\Bundle\FinancialTwigExtensionBundle\Twig\FormatIbanExtension
@@ -25,7 +26,7 @@ class FormatIbanExtensionTest extends TestCase
     public function testGetFilters()
     {
         self::assertEquals(
-            [new \Twig_SimpleFilter('formatIban', [$this->format_iban_extension, 'formatIban'])],
+            [new TwigFilter('formatIban', [$this->format_iban_extension, 'formatIban'])],
             $this->format_iban_extension->getFilters()
         );
     }
