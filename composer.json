@@ -4,19 +4,16 @@
     "description": "A simple Symfony Bundle that contains twig extensions for displaying financial information.",
     "license":     "MIT",
     "require": {
-        "php":                      "^7.1",
+        "php":                      "^7.2",
         "ronanguilloux/isocodes":   "^2.1",
-        "symfony/framework-bundle": "^3.3|^4.0"
+        "symfony/framework-bundle": "^4.4"
     },
     "require-dev": {
         "hostnet/phpcs-tool":  "^5.2",
         "phpunit/phpunit":     "^8.5.8",
-        "symfony/twig-bundle": "^3.3|^4.0",
-        "symfony/yaml":        "^3.3|^4.0",
-        "twig/twig":           "^1.38.2|^2.7.2"
-    },
-    "conflict": {
-        "twig/twig": "<1.38"
+        "symfony/twig-bundle": "^4.4",
+        "symfony/yaml":        "^4.4",
+        "twig/twig":           "^2.7.2"
     },
     "autoload": {
         "psr-4": {
