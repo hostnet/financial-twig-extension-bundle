@@ -18,12 +18,12 @@ class FormatIbanExtensionTest extends TestCase
      */
     private $format_iban_extension;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->format_iban_extension = new FormatIbanExtension();
     }
 
-    public function testGetFilters()
+    public function testGetFilters(): void
     {
         self::assertEquals(
             [new TwigFilter('formatIban', [$this->format_iban_extension, 'formatIban'])],
@@ -31,7 +31,7 @@ class FormatIbanExtensionTest extends TestCase
         );
     }
 
-    public function testFormatIban()
+    public function testFormatIban(): void
     {
         self::assertSame('NL85 INGB 0008 5231 41', $this->format_iban_extension->formatIban('NL85INGB0008523141'));
         self::assertSame('NL85 INGB 0008 5231 41', $this->format_iban_extension->formatIban('N L85IN GB00085 23141'));

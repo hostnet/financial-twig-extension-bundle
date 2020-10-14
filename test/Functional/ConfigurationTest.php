@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 class ConfigurationTest extends KernelTestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         static::bootKernel();
     }
@@ -18,7 +18,7 @@ class ConfigurationTest extends KernelTestCase
     /**
      * @dataProvider formatIbanProvider
      */
-    public function testFormatIban(string $unformatted_iban, string $expected)
+    public function testFormatIban(string $unformatted_iban, string $expected): void
     {
         $container = static::$kernel->getContainer();
         $twig      = $container->get('twig');

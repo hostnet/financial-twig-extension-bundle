@@ -20,12 +20,12 @@ class HostnetFinancialTwigExtensionBundleTest extends TestCase
      */
     private $hostnet_financial_twig_extension_bundle;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->hostnet_financial_twig_extension_bundle = new HostnetFinancialTwigExtensionBundle();
     }
 
-    public function testBuild()
+    public function testBuild(): void
     {
         $container = new ContainerBuilder();
         $this->hostnet_financial_twig_extension_bundle->build($container);
