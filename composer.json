@@ -10,7 +10,7 @@
     },
     "require-dev": {
         "hostnet/phpcs-tool":  "^5.2",
-        "phpunit/phpunit":     "^6.3",
+        "phpunit/phpunit":     "^8.5.8",
         "symfony/twig-bundle": "^3.3|^4.0",
         "symfony/yaml":        "^3.3|^4.0",
         "twig/twig":           "^1.38.2|^2.7.2"
