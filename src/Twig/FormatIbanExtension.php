@@ -3,6 +3,7 @@
  * @copyright 2017 Hostnet B.V.
  */
 declare(strict_types=1);
+
 namespace Hostnet\Bundle\FinancialTwigExtensionBundle\Twig;
 
 use IsoCodes\Iban;
@@ -17,7 +18,7 @@ class FormatIbanExtension extends AbstractExtension
     public function getFilters()
     {
         return [
-            new TwigFilter('formatIban', [$this, 'formatIban'])
+            new TwigFilter('formatIban', [$this, 'formatIban']),
         ];
     }
 
