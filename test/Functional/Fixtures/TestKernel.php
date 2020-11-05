@@ -19,7 +19,7 @@ class TestKernel extends Kernel
         return [
             new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new \Symfony\Bundle\TwigBundle\TwigBundle(),
-            new \Hostnet\Bundle\FinancialTwigExtensionBundle\Bundle\HostnetFinancialTwigExtensionBundle()
+            new \Hostnet\Bundle\FinancialTwigExtensionBundle\Bundle\HostnetFinancialTwigExtensionBundle(),
         ];
     }
 

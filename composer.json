@@ -9,7 +9,7 @@
         "symfony/framework-bundle": "^4.4"
     },
     "require-dev": {
-        "hostnet/phpcs-tool":  "^5.2",
+        "hostnet/phpcs-tool":  "^8.3.17",
         "phpunit/phpunit":     "^8.5.8",
         "symfony/twig-bundle": "^4.4",
         "symfony/yaml":        "^4.4",
