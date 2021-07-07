@@ -1,2 +1,6 @@
 framework:
     secret: test
+
+twig:
+    paths:
+        "%kernel.project_dir%/test/Functional/Fixtures/Resources/views": FinancialTwigBundleFunctional

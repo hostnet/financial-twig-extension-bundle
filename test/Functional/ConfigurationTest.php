@@ -25,7 +25,7 @@ class ConfigurationTest extends KernelTestCase
 
         self::assertSame(
             $expected,
-            $twig->render('/ibantest.html.twig', ['iban' => $unformatted_iban])
+            $twig->render('@FinancialTwigBundleFunctional/ibantest.html.twig', ['iban' => $unformatted_iban])
         );
     }
 
