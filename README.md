@@ -40,7 +40,7 @@ NL85 INGB 0008 5231 41
 Requirements
 ------------
 
-PHP 7.1.x or above.
+PHP 7.3.x or above.
 
 License
 -------

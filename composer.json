@@ -4,7 +4,7 @@
     "description": "A simple Symfony Bundle that contains twig extensions for displaying financial information.",
     "license":     "MIT",
     "require": {
-        "php":                    "^7.2",
+        "php":                    "^7.3||^8.0",
         "ronanguilloux/isocodes": "^2.1",
         "symfony/http-kernel":    "^4.4||^5.0"
     },
