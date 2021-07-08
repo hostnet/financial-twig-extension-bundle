@@ -8,6 +8,9 @@ namespace Hostnet\Bundle\FinancialTwigExtensionBundle\Functional;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
+/**
+ * @coversNothing
+ */
 class ConfigurationTest extends KernelTestCase
 {
     protected function setUp(): void
