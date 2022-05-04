@@ -31,12 +31,12 @@ class TestKernel extends Kernel
         $loader->load(__DIR__ . '/config/config.yml');
     }
 
-    public function getLogDir()
+    public function getLogDir(): string
     {
         return __DIR__ . '/../../../var/log';
     }
 
-    public function getCacheDir()
+    public function getCacheDir(): string
     {
         return __DIR__ . '/../../../var/cache';
     }
