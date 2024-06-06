@@ -1,5 +1,6 @@
 framework:
     secret: test
+    test: true
 
 twig:
     paths:

@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace Hostnet\Bundle\FinancialTwigExtensionBundle\Functional;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+use Twig\Environment;
 
 /**
  * @coversNothing
@@ -23,8 +24,9 @@ class ConfigurationTest extends KernelTestCase
      */
     public function testFormatIban(string $unformatted_iban, string $expected): void
     {
-        $container = static::$kernel->getContainer();
-        $twig      = $container->get('twig');
+        static::bootKernel();
+        $container = self::getContainer();
+        $twig      = $container->get(Environment::class);
 
         self::assertSame(
             $expected,
